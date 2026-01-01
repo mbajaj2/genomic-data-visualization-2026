@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<section>
+    <div class="section-title">
+        <h2><span>{{ page.title }}</span></h2>
+    </div>
+
+    <div class="article-post">
+      {{page.learning}}
+      <br>
+              {% if page.notes != null %}
+              <a href="{{ site.baseurl }}/resources/notes/{{page.notes}}">[Lecture]</a>
+              {% endif %}
+              {% if page.code != null %}
+              <a href="{{ site.baseurl }}/resources/code/{{page.code}}">[Code]</a>
+              {% endif %}
+              {% if page.hw != null %}
+              <a href="{{ site.baseurl }}/resources/hw/{{page.hw}}">[Homework]</a>
+              {% endif %}
+    </div>
+
+</section>
